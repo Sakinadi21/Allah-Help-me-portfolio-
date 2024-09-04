@@ -13,7 +13,7 @@ body {
 }
 
 .container-other {
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
     padding: 20px 0;
     display: flex;
@@ -23,39 +23,33 @@ header {
     background-color: #1c1c1c;
     padding: 20px 0;
     border-bottom: 1px solid #333;
+ }
+
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    padding-top: 40px;
 }
 
-header .logo {
-    float: left;
+.nav-left {
+    color: rgb(246, 92, 36);
+    font-weight: 800;
     font-size: 24px;
-    color: #ff6600;
 }
 
-header nav {
-    float: right;
+.nav-right {
+    display: flex;
+    gap: 40px;
 }
 
-header nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+.last-nav {
+    background-color: rgb(246, 92, 36);
+    padding: 4px 9px;
+    text-align: center;
 }
 
-header nav ul li {
-    display: inline;
-    margin-left: 20px;
-}
 
-header nav ul li a {
-    color: #fff;
-    text-decoration: none;
-}
-
-header nav ul li a.button {
-    background-color: #ff6600;
-    padding: 10px 20px;
-    border-radius: 5px;
-}
 
 .intro {
     display: flex;
@@ -96,13 +90,20 @@ header nav ul li a.button {
     background-color: #000;
 }
 
+
+
+
+
+
 .button-container {
     display: flex;
-    
+    justify-content: left;
+    align-items: center;
     background-color: #333;
-    
+    margin: 0;
     padding: 5px;
     border-radius: 50px;
+    width:250px;
    
 }
 
@@ -110,7 +111,7 @@ header nav ul li a.button {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10px 20px;
+    padding: 5px 10px;
     color: white;
     font-size: 16px;
     font-weight: bold;
@@ -450,12 +451,13 @@ header nav ul li a.button {
     flex-direction: column;
     align-items: center;
     padding: 20px;
+    background: url(background/BG\ \(3\).png);
 }
 
 .case-study {
     display: flex;
     
-    background: #1e1e1e;
+    background: url(background/BG\ \(2\).png);
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 8px;
@@ -464,10 +466,14 @@ header nav ul li a.button {
     gap: 20%;
 }
 
-
+.image-wrapper img {
+    height: 100%;
+    width: 100%;
+    }
 .case-study-content {
     display: flex;
     flex-direction: column;
+    
 }
 
 .case-study-content h3 {
@@ -489,7 +495,7 @@ header nav ul li a.button {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 120vh;
 }
 
 .contact-container {
@@ -608,7 +614,10 @@ nav ul li a:hover {
     width: 24px;
     height: 24px;
 }
-
+.footer-content{
+    background: url(background/BG\ \(3\).png);
+    
+}
 .footer-bottom {
     font-size: 14px;
     color: #555;
@@ -617,6 +626,17 @@ nav ul li a:hover {
 .footer-bottom .name {
     color: #ff6600;
 }
+ 
+
+
+
+
+
+
+
+
+
+
 
 
 .overlapping-images-section {
@@ -652,387 +672,256 @@ nav ul li a:hover {
    
 }
 
+/*
+
+*{
+    border: 1px solid red;
+}
+body{
+    border: 2px dashed green;
+}  */
+
 @media only screen and (min-width: 200px) and (max-width: 576px) {
+
     header {
         flex-direction: column;
-        justify-content: center;
         align-items: center;
-    }
-    .logo {
-        font-size: 12px;
-    }
-
-   nav ul {
-        flex-direction: column;
-        gap: 10px; /* Adjust the gap distance as needed */
-    }
-    header nav {
-        float: none;
-    }
-    header nav ul {
         text-align: center;
-        padding: 0;
     }
 
-    
-    header nav ul li {
-        display: block;
-        margin: 10px 0;
-    }
-   
-    .skills li {
-        font-size: 10px;
-       
-    }
-    
-.button-container {
-    display: flex;
-    
-    background-color: #333;
-    
-    padding: 5px;
-    border-radius: 50px;
-   
-}
-
-.button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 20px;
-    color: white;
-    font-size: 12px;
-    font-weight: bold;
-}
-
-.portfolio-button {
-    background-color: #FF7F00;
-    border-radius: 50px;
-    margin-right: 10px;
-}
-
-.hire-me-button {
-    background-color: transparent;
-   
-}
-
-#career h2 {
-    font-size: 12px;
-    margin-bottom: 20px;
-    color: white;
-}
-
-#career p {
-    font-size: 10px;
-    line-height: 1.6;
-}
-.portfolio-button svg {
-    width: 10px;
-    height: 10px;
-    margin-left: 10px;
-    stroke: white;
-}
-.social-media{
-    display: flex;
-}
-  
-    .menu {
-        display: flex;
-        justify-content: center;
-        background-color: #000;
-        padding: 2px;
-        gap: 30px;
-        transform: rotate(-5deg);
-    }
-    .skills h2 {
-        font-size: 12px;
-        margin-bottom: 20px;
-        color: white;
-    }
-    
-    .menu-item {
-        font-size: 10px;
-        color: white;
-        margin: 0 5px;
-        position: relative;
-        
-    }
-    
-    .menu-item:not(:last-child)::after {
-        content: '★';
-        margin-left: 2px;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-
-    .experience-section{
-        gap: 20px;
-    }
-    .experience-content h2 {
+    .logo {
         font-size: 18px;
-        text-transform: uppercase;
-        color: #888;
-        gap: 5px;
-        margin-bottom: 5px;
-    }
-    
-    .experience-content h1 {
-        font-size: 12px;
-        margin: 10px 0;
-    }
-    
-    .experience-content p {
-        font-size: 10px;
-        line-height: 1.5em;
-        color: #ccc;
-        margin-bottom: 20px;
-        
-    }
-    
-    .experience-item {
-        margin-bottom: 20px;
-    }
-    
-    .experience-item p {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        color: #ccc;
-        gap: 10px;
-        font-size: 8px;
-    }
-    .experience-item company{
-      display: flex; 
-      font-size: 8px; 
-    }
-    .experience-pl{
-        display: flex;
-        gap: 20px;
-        font-size: 10px;
-    }
-    .experience-item .year {
-        font-size: 10px;
-        color: #aaa;
-        display: flex;
-       
-    }
-    
-    .experience-item h3 {
-        font-size: 10px;
-        margin: 0.2em 0;
+        margin-bottom: 10px;
     }
 
+    .nav-bar {
+        flex-direction: column;
+        padding-top: 20px;
+    }
+
+    .nav-left {
+        text-align: center;
+        margin: auto;
+    }
+
+    .nav-right {
+        flex-wrap: wrap;
+        gap: 10px;
+        padding-top: 20px;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .last-nav {
+        width: max-content;
+    }
+
+    .button-container {
+        /* flex-direction: column; */
+        width: 100%;
+        padding: 5px;
+    }
+
+    .button {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    .portfolio-button svg {
+        width: 15px;
+        height: 15px;
+    }
+
+    #career h2 {
+        font-size: 24px;
+    }
+
+    #career p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .social-media {
+        justify-content: center;
+    }
+
+    .menu {
+        padding: 5px;
+        gap: 5px;
+        
+    }
+
+    .menu-item {
+        
+        font-size: 10px;
+    }
+
+    .experience-section {
+        padding: 20px;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .experience-content h2 {
+        font-size: 20px;
+    }
+
+    .experience-content h1 {
+        font-size: 18px;
+    }
+
+    .experience-content p {
+        font-size: 14px;
+        line-height: 1.5em;
+    }
 
     .intro {
         flex-direction: column;
         padding: 30px 0;
+        text-align: center;
     }
 
     .intro-text h1 {
-        font-size: 12px;
+        font-size: 32px;
     }
-   .intro-text p{
- font-size: 8px;
-    }
-    .intro-text h2{
-        font-size: 12px;
-           }
 
-    .intro-image {
-        text-align: center;
-        margin-top: 20px;
+    .intro-text p {
+        font-size: 14px;
     }
 
     .intro-image img {
-        width: 100%;
-        max-width: 300px;
+        max-width: 100%;
+        width: 300px;
     }
-    .about-section{
-        gap: 20px;
-    }
-   
 
- .experience-section, .portfolio-section {
+    .about-section {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .about-content h2 {
+        font-size: 24px;
+    }
+
+    .about-content p {
+        font-size: 14px;
+    }
+
+    .stars span {
+        font-size: 24px;
+    }
+
+    .years h1 {
+        font-size: 24px;
+    }
+
+    .years p {
+        font-size: 14px;
+    }
+
+    .awards-section {
+        padding: 20px;
+    }
+
+    .awards-header h2 {
+        font-size: 24px;
+    }
+
+    .awards-header p {
+        font-size: 14px;
+    }
+
+    .award-item {
         padding: 20px;
         flex-direction: column;
         align-items: flex-start;
-        gap: 20px;
-    }
-.about-content h2{
-    font-size: 12px;
-    
-}
-.about-content p{
-    font-size: 10px;
-}
-.stars{
-font-size: 10px;
-}
-.years h1{
-    font-size: 12px;
-}
-.years p{
-    font-size: 10px;
-}
-    .experience-item {
-        width: 100%;
     }
 
-    
-.awards-section {
-    max-width: 1200px;
-    margin: 50px auto;
-    padding: 20px;
-    
-}
-
-.awards-header {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.awards-header h2 {
-    font-size: 12px;
-    margin-bottom: 10px;
-}
-.award-category p{
-    font-size: 10px;
-}
-.awards-header p {
-    font-size: 10px;
-    color: #ccc;
-    margin-bottom: 20px;
-}
-
-.award-item {
-       background-color: #000;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-
-.award-details h3 {
-    font-size: 10px;
-    margin: 0;
-  
-}
-
-.award-details p {
-    font-size: 10px;
-    color: #ccc;
-    margin-top: 10px;
-}
-
-.award-category {
-    text-align: right;
-    font-size: 1em;
-    color: #fff;
-}
-
-.award-category p {
-    background-color: #000;
-    padding: 10px;
-    border-radius: 5px;
-}
-
-.portfolio-section {
-    max-width: 1200px;
-    margin: 50px auto;
-    padding: 20px;
-    text-align: center;
-}
-
-.portfolio-header h2 {
-   font-size: 12px;
-}
-
-.portfolio-header p {
-   font-size: 10px;
-}
-
-
-
-
-.case-study-content h2{
-font-size: 14px;
-}
-.case-study-content h3{
-    font-size: 12px;
+    .award-details h3 {
+        font-size: 18px;
     }
-    .case-study-content p{
-        font-size: 10px;
-        }
+
+    .award-details p {
+        font-size: 14px;
+    }
+
+    .portfolio-section {
+        padding: 20px;
+    }
+
+    .portfolio-header h2 {
+        font-size: 24px;
+    }
+
+    .portfolio-header p {
+        font-size: 14px;
+    }
+
     .case-study {
         flex-direction: column;
         align-items: center;
+        padding: 20px;
         gap: 10px;
-
     }
 
-    .case-study img {
-       width: 70%;
-       height: 70%;
+    .image-wrapper {
+        width: 100%;
+    }
+
+    .case-study-content h2 {
+        font-size: 18px;
+    }
+
+    .case-study-content h3 {
+        font-size: 16px;
+    }
+
+    .case-study-content p {
+        font-size: 14px;
     }
 
     .contact-form {
-        width: 100%;
-        font-size: 10px;
+        width: 80%; 
+        padding: 20px;
+        font-size: 14px;
     }
 
-    .contact-container h1{
-        font-size: 12px;
+    .contact-container h1 {
+        font-size: 20px;
     }
-    .contact-container h2{
-        font-size: 10px;
+
+    .contact-container h2 {
+        font-size: 18px;
     }
-    .contact-forms{
-        font-size: 12px;
-    }
-    .contact-form h3{
-font-size: 10px;
-    }
-    .contact-section {
-        padding: 20px;
+
+    .contact-form h3 {
+        font-size: 16px;
     }
 
     .overlapping-images-section {
         flex-direction: column;
-        height: auto;
+        padding: 20px;
     }
 
     .background-image {
         bottom: 0;
         right: 0;
-        height: 30vh;
+        height: 150px;
     }
 
     .foreground-image {
         margin-top: 20px;
-        width: 50%;
-    }
-
-    .button-container {
-        flex-direction: column;
         width: 100%;
-    }
-
-    .button-portfolio,
-    .button-hireme {
-        width: 100%;
-        margin: 10px 0;
     }
 
     footer {
-        text-align: center;
         padding: 20px;
+        text-align: center;
     }
 
     footer .logo {
-        margin-bottom: 10px;
+        font-size: 18px;
     }
 
     footer nav ul {
@@ -1041,7 +930,6 @@ font-size: 10px;
     }
 
     footer nav ul li {
-        display: block;
         margin: 10px 0;
     }
 
@@ -1052,6 +940,7 @@ font-size: 10px;
     footer .footer-content {
         font-size: 14px;
     }
+
     .banner-profile-container {
         flex-direction: column;
         padding: 10px;
